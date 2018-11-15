@@ -7,11 +7,14 @@ def make_can_msg(addr, dat, alt):
   return [addr, 0, dat, alt]
 
 def create_lkas11(packer, car_fingerprint, apply_steer, steer_req, cnt, enabled, lkas11, hud_alert, use_stock, keep_stock=False):
+  if keep_stock:
+    use_stock = True
+
   if enabled:
     use_stock = False
 
   values = {
-    "CF_Lkas_Icon": lkas11["CF_Lkas_Icon"] if use_stock else (3 if enabled else 0),
+    "CF_Lkas_Icon": lkas11["CF_Lkas_Icon"] if use_stock else (2 if enabled else 0),
     "CF_Lkas_LdwsSysState": lkas11["CF_Lkas_LdwsSysState"] if use_stock else (3 if steer_req else 1),
     "CF_Lkas_SysWarning": lkas11["CF_Lkas_SysWarning"] if use_stock else hud_alert,
     "CF_Lkas_LdwsLHWarning": lkas11["CF_Lkas_LdwsLHWarning"] if keep_stock else 0,
