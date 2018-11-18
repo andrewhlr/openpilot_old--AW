@@ -84,7 +84,7 @@ class CarController(object):
     apply_steer = limit_steer_rate(apply_steer, self.apply_steer_last, SteerLimitParams)
 
     # If ALCA is disabled, and turning indicators are turned on, we do not want OP to steer,
-    if not enabled or (turning_signal and not alca_enabled):
+    if not enabled or (turning_signal and not alca_enabled) or (CS.v_ego < 16.67):
       apply_steer = 0
 
     steer_req = 1 if enabled else 0
