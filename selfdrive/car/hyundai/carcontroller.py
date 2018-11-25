@@ -11,8 +11,8 @@ import numpy as np
 # Steer torque limits
 
 class SteerLimitParams:
-  STEER_MAX = 300   # 409 is the max
-  STEER_DELTA_UP = 4
+  STEER_MAX = 350   # 409 is the max
+  STEER_DELTA_UP = 3
   STEER_DELTA_DOWN = 4
 
 class CarController(object):
