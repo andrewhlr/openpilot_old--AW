@@ -1055,7 +1055,7 @@ static void ui_draw_vision_footer(UIState *s) {
   ui_draw_vision_face(s);
 }
 
- static void ui_draw_vision_alert(UIState *s, int va_size, int va_color,
+static void ui_draw_vision_alert(UIState *s, int va_size, int va_color,
                                   const char* va_text1, const char* va_text2) {
   const UIScene *scene = &s->scene;
   int ui_viz_rx = scene->ui_viz_rx;
