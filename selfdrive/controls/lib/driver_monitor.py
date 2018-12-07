@@ -5,10 +5,10 @@ from common.filter_simple import FirstOrderFilter
 
 _DT = 0.01                  # update runs at 100Hz
 _DTM = 0.1                  # DM runs at 10Hz
-_AWARENESS_TIME = 300       # 5 minutes limit without user touching steering wheels make the car enter a terminal status
+_AWARENESS_TIME = 99999       # 5 minutes limit without user touching steering wheels make the car enter a terminal status
 _AWARENESS_PRE_TIME = 20.   # a first alert is issued 20s before expiration
 _AWARENESS_PROMPT_TIME = 5. # a second alert is issued 5s before start decelerating the car
-_DISTRACTED_TIME = 7.
+_DISTRACTED_TIME = 9999.
 _DISTRACTED_PRE_TIME = 4.
 _DISTRACTED_PROMPT_TIME = 2.
 # measured 1 rad in x FOV. 1152x864 is original image, 160x320 is a right crop for model
